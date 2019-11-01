@@ -1,0 +1,49 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  datasource:
+    url: jdbc:mysql://localhost:3306/zhuce?characterEncoding=utf8&useSSL=true&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: 127.0.0.1
+    database: 0
+    port: 6379
+    timeout: 10000
+    password: root
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+  mail:
+    host: smtp.163.com
+    #\u53D1\u9001\u8005\u90AE\u7BB1\u8D26\u53F7
+    username: 13179299529@163.com
+    #\u53D1\u9001\u8005\u5BC6\u94A5
+    password: jiang980212CHU
+    default-encoding: utf-8
+    port: 465
+    properties:
+      mail:
+        debug:
+          true
+        smtp:
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+
+mybatis:
+  mapper-locations: classpath:mapping/**Mapper.xml
+  type-aliases-package: com.suixingpay.thefourthgroup.studentmanagementsystem.entity
+
+
+
+
+
+
+
+
